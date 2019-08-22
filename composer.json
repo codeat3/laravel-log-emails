@@ -1,0 +1,54 @@
+{
+    "name": "codeat3/laravel-log-emails",
+    "description": "laravel-email-db-log",
+    "keywords": [
+        "codeat3",
+        "laravel-log-emails"
+    ],
+    "homepage": "https://github.com/codeat3/laravel-log-emails",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Swapnil Sarwe",
+            "email": "swapnilsarwe@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Codeat3\\LaravelLogEmails\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Codeat3\\LaravelLogEmails\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Codeat3\\LaravelLogEmails\\LaravelLogEmailsServiceProvider",
+                "Codeat3\\LaravelLogEmails\\LaravelLogEmailsEventServiceProvider"
+            ],
+            "aliases": {
+                "LaravelLogEmails": "Codeat3\\LaravelLogEmails\\LaravelLogEmailsFacade"
+            }
+        }
+    }
+}
